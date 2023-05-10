@@ -137,11 +137,11 @@ export const useRipple = (
 
     function keyboardListener(event: KeyboardEvent) {
       const targetElement = event?.target as HTMLElement;
-      const isThereARippleEffectRunning = !targetElement?.getElementsByClassName(
+      const theresNoRippleEffectRunning = !targetElement?.getElementsByClassName(
         RIPPLE_CLASSNAME,
       ).length;
 
-      if (isThereARippleEffectRunning) {
+      if (!theresNoRippleEffectRunning) {
         keyboardRipple(event);
       }
     }
