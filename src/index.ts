@@ -141,7 +141,7 @@ export const useRipple = (
         RIPPLE_CLASSNAME,
       ).length;
 
-      if (!theresNoRippleEffectRunning) {
+      if (theresNoRippleEffectRunning) {
         keyboardRipple(event);
       }
     }
