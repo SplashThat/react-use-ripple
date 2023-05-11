@@ -126,9 +126,9 @@ export const useRipple = (
     const ripple = createRipple(element, options);
 
     const keyboardRipple = (e: KeyboardEvent) => {
-      const isAnElegibleKey = [KEY_ENTER, KEY_SPACE].includes(e.key);
+      const isElegibleKey = [KEY_ENTER, KEY_SPACE].includes(e.key);
       const elementIsFocused = element === e.target;
-      const shouldRipple = isAnElegibleKey && elementIsFocused;
+      const shouldRipple = isElegibleKey && elementIsFocused;
 
       shouldRipple && ripple();
     };
